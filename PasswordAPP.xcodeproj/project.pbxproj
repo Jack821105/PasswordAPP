@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		FA10A7532570EF5E004E69CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A7522570EF5E004E69CA /* AppDelegate.swift */; };
 		FA10A7552570EF5E004E69CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A7542570EF5E004E69CA /* SceneDelegate.swift */; };
-		FA10A7572570EF5E004E69CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A7562570EF5E004E69CA /* ViewController.swift */; };
 		FA10A75A2570EF5E004E69CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA10A7582570EF5E004E69CA /* Main.storyboard */; };
 		FA10A75C2570EF60004E69CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA10A75B2570EF60004E69CA /* Assets.xcassets */; };
 		FA10A75F2570EF60004E69CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA10A75D2570EF60004E69CA /* LaunchScreen.storyboard */; };
 		FA10A76A2570EF60004E69CA /* PasswordAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A7692570EF60004E69CA /* PasswordAPPTests.swift */; };
 		FA10A7752570EF60004E69CA /* PasswordAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A7742570EF60004E69CA /* PasswordAPPUITests.swift */; };
+		FA10A7902570F25C004E69CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A78F2570F25C004E69CA /* User.swift */; };
+		FA10A79C2570F298004E69CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A79B2570F298004E69CA /* LoginViewController.swift */; };
+		FA10A7A12570F2B9004E69CA /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10A7A02570F2B9004E69CA /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		FA10A74F2570EF5E004E69CA /* PasswordAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA10A7522570EF5E004E69CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA10A7542570EF5E004E69CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA10A7562570EF5E004E69CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA10A7592570EF5E004E69CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA10A75B2570EF60004E69CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA10A75E2570EF60004E69CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		FA10A7702570EF60004E69CA /* PasswordAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA10A7742570EF60004E69CA /* PasswordAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAPPUITests.swift; sourceTree = "<group>"; };
 		FA10A7762570EF60004E69CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA10A78F2570F25C004E69CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA10A79B2570F298004E69CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA10A7A02570F2B9004E69CA /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,10 @@
 		FA10A7512570EF5E004E69CA /* PasswordAPP */ = {
 			isa = PBXGroup;
 			children = (
-				FA10A7522570EF5E004E69CA /* AppDelegate.swift */,
-				FA10A7542570EF5E004E69CA /* SceneDelegate.swift */,
-				FA10A7562570EF5E004E69CA /* ViewController.swift */,
+				FA10A7972570F279004E69CA /* ViewModel */,
+				FA10A78E2570F24C004E69CA /* Model */,
+				FA10A7862570EF6F004E69CA /* Delegate */,
+				FA10A78A2570EF77004E69CA /* View */,
 				FA10A7582570EF5E004E69CA /* Main.storyboard */,
 				FA10A75B2570EF60004E69CA /* Assets.xcassets */,
 				FA10A75D2570EF60004E69CA /* LaunchScreen.storyboard */,
@@ -126,6 +131,39 @@
 				FA10A7762570EF60004E69CA /* Info.plist */,
 			);
 			path = PasswordAPPUITests;
+			sourceTree = "<group>";
+		};
+		FA10A7862570EF6F004E69CA /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FA10A7522570EF5E004E69CA /* AppDelegate.swift */,
+				FA10A7542570EF5E004E69CA /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		FA10A78A2570EF77004E69CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA10A79B2570F298004E69CA /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA10A78E2570F24C004E69CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA10A78F2570F25C004E69CA /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FA10A7972570F279004E69CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA10A7A02570F2B9004E69CA /* LoginViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA10A7572570EF5E004E69CA /* ViewController.swift in Sources */,
+				FA10A79C2570F298004E69CA /* LoginViewController.swift in Sources */,
+				FA10A7902570F25C004E69CA /* User.swift in Sources */,
 				FA10A7532570EF5E004E69CA /* AppDelegate.swift in Sources */,
+				FA10A7A12570F2B9004E69CA /* LoginViewModel.swift in Sources */,
 				FA10A7552570EF5E004E69CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
